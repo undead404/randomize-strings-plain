@@ -1,8 +1,10 @@
 {
   "author": "Vitalii Perehonchuk <Vitalii_Perehonchuk@epam.com>",
   "devDependencies": {
+    "core-js": "~3.18.3",
     "@babel/cli": "~7.15.7",
     "@babel/core": "~7.15.8",
+    "@babel/preset-env": "~7.15.8",
     "serve": "~12.0.1"
   },
   "description": "Plain JS & HTML & CSS to randomize a list of strings",
