@@ -1,5 +1,8 @@
 {
   "author": "Vitalii Perehonchuk <Vitalii_Perehonchuk@epam.com>",
+  "dependencies": {
+    "axios": "0.23.0"
+  },
   "devDependencies": {
     "@babel/core": "~7.15.8",
     "autoprefixer": "~10.3.7",
