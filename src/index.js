@@ -4,6 +4,11 @@ import shuffleWithRandom from "./shuffle-with-random";
 const $button = document.getElementById("shuffle-button");
 const $textarea = document.getElementById("strings-input");
 
+function removeErrorMessages() {
+  for ($errorDiv of document.getElementsByClassName("error")) {
+    $errorDiv.remove();
+  }
+}
 
 $button.addEventListener("click", async () => {
   try {
@@ -15,6 +20,12 @@ $button.addEventListener("click", async () => {
     const shuffledLines = await shuffleWithRandom(lines);
     // Set textarea's content with shuffled lines
     $textarea.value = shuffledLines.join("\n");
+    removeErrorMessages();
+  } catch (error) {
+    const $errorDiv = document.createElement("div");
+    $errorDiv.className = "error";
+    $errorDiv.innerText = `${error}`;
+    $button.after($errorDiv);
   } finally {
     $button.disabled = false;
     $textarea.disabled = false;

@@ -21,3 +21,7 @@ textarea {
     min-width: 50vw;
     overflow: auto;
 }
+
+.error {
+    color: red;
+}
