@@ -1,0 +1,23 @@
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border-radius: 8px;
+    border-width: 0;
+    padding: 20px 24px;
+    text-align: center;
+    transition: all 200ms;
+    cursor: pointer;
+    margin-top: 16px;
+    font-size: 1.4rem;
+}
+
+textarea {
+    border: 1px solid #888;
+    min-height: 50vh;
+    min-width: 50vw;
+    overflow: auto;
+}
