@@ -1,2 +1,8 @@
+[development]
+last 2 chrome versions
+last 2 firefox versions
+last 2 safari versions
+
+[production]
 > 0.25%
 not dead
