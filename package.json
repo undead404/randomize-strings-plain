@@ -2,7 +2,9 @@
   "author": "Vitalii Perehonchuk <Vitalii_Perehonchuk@epam.com>",
   "devDependencies": {
     "@babel/core": "~7.15.8",
+    "autoprefixer": "~10.3.7",
     "parcel": "~2.0.0",
+    "postcss": "~8.3.11",
     "rimraf": "~3.0.2"
   },
   "description": "Plain JS & HTML & CSS to randomize a list of strings",
