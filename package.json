@@ -10,7 +10,7 @@
   "name": "randomize-strings-plain",
   "repository": "https://github.com/undead404/randomize-strings-plain",
   "scripts": {
-    "build": "babel src -d build",
+    "build": "babel src -d build --copy-files",
     "start": "serve build"
   },
   "version": "0.1.0"
