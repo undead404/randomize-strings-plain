@@ -4,6 +4,8 @@ import shuffleWithRandom from "./shuffle-with-random";
 const $button = document.getElementById("shuffle-button");
 const $textarea = document.getElementById("strings-input");
 
+const ENABLE_DELAY = 200;
+
 function removeErrorMessages() {
   for ($errorDiv of document.getElementsByClassName("error")) {
     $errorDiv.remove();
@@ -27,7 +29,9 @@ $button.addEventListener("click", async () => {
     $errorDiv.innerText = `${error}`;
     $button.after($errorDiv);
   } finally {
-    $button.disabled = false;
-    $textarea.disabled = false;
+    setTimeout(() => {
+      $button.disabled = false;
+      $textarea.disabled = false;
+    }, ENABLE_DELAY);
   }
 });
