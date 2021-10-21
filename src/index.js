@@ -29,10 +29,12 @@ function shuffle(array) {
 }
 
 $button.addEventListener("click", () => {
+  $button.disabled = true;
   // Get textarea's content and split it into lines
   const lines = $textarea.value.split("\n");
   // ACTION!
   const shuffledLines = shuffle(lines);
   // Set textarea's content with shuffled lines
   $textarea.value = shuffledLines.join("\n");
+  $button.disabled = false;
 });
