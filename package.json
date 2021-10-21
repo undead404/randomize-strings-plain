@@ -2,14 +2,16 @@
   "author": "Vitalii Perehonchuk <Vitalii_Perehonchuk@epam.com>",
   "devDependencies": {
     "@babel/cli": "~7.15.7",
-    "@babel/core": "~7.15.8"
+    "@babel/core": "~7.15.8",
+    "serve": "~12.0.1"
   },
   "description": "Plain JS & HTML & CSS to randomize a list of strings",
   "license": "MIT",
   "name": "randomize-strings-plain",
   "repository": "https://github.com/undead404/randomize-strings-plain",
   "scripts": {
-    "build": "babel src -d build"
+    "build": "babel src -d build",
+    "start": "serve build"
   },
   "version": "0.1.0"
 }
