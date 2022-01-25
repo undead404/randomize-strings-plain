@@ -1,10 +1,9 @@
 import shuffleWithRandom from "./shuffle-with-random";
+import "./styles.css";
 
 // Cache elements not to search for them every time
 const $button = document.getElementById("shuffle-button");
 const $textarea = document.getElementById("strings-input");
-
-import './styles.css';
 
 const ENABLE_DELAY = 200;
 
