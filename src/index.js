@@ -4,6 +4,8 @@ import shuffleWithRandom from "./shuffle-with-random";
 const $button = document.getElementById("shuffle-button");
 const $textarea = document.getElementById("strings-input");
 
+import './styles.css';
+
 const ENABLE_DELAY = 200;
 
 function removeErrorMessages() {
