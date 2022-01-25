@@ -3,6 +3,8 @@ const path = require("path");
 const dotenv = require("dotenv");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { EnvironmentPlugin } = require("webpack");
+var WebpackPwaManifest = require("webpack-pwa-manifest");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 const environment = process.env.NODE_ENV ?? "development";
 
@@ -52,6 +54,26 @@ module.exports = {
       //   title: "Shuffle strings",
       // Load a custom template (lodash by default)
       template: "src/index.html",
+    }),
+    new WebpackPwaManifest({
+      background_color: "#ffffff",
+      description: "Shuffle strings with true randomness",
+      icons: [
+        {
+          src: path.resolve("assets/images/icon512.png"),
+          sizes: [32, 96, 128, 192, 256, 384, 512], // multiple sizes
+        },
+      ],
+      ios: true,
+      name: "Shuffle Strings",
+      short_name: "Shu Stri",
+      theme_color: '#FF0000'
+    }),
+    new WorkboxPlugin.GenerateSW({
+      // these options encourage the ServiceWorkers to get in there fast
+      // and not allow any straggling "old" SWs to hang around
+      clientsClaim: true,
+      skipWaiting: true,
     }),
   ],
 };

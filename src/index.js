@@ -1,11 +1,16 @@
 import shuffleWithRandom from "./shuffle-with-random";
+import registerSW from "./register-sw";
 import "./styles.css";
+import maybeShowInstall from "./maybe-show-install";
 
 // Cache elements not to search for them every time
 const $button = document.getElementById("shuffle-button");
 const $textarea = document.getElementById("strings-input");
 
 const ENABLE_DELAY = 200;
+
+registerSW();
+maybeShowInstall();
 
 function removeErrorMessages() {
   for ($errorDiv of document.getElementsByClassName("error")) {
