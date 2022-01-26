@@ -1,7 +1,8 @@
 {
   "author": "Vitalii Perehonchuk <Vitalii_Perehonchuk@epam.com>",
   "dependencies": {
-    "axios": "0.23.0"
+    "axios": "0.23.0",
+    "lodash": "~4.17.21"
   },
   "devDependencies": {
     "css-loader": "^6.5.1",
