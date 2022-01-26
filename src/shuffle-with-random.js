@@ -1,4 +1,5 @@
 import axios from "axios";
+import shuffle from "lodash/shuffle";
 
 const API_ENDPOINT = "https://api.random.org/json-rpc/4/invoke";
 
@@ -8,6 +9,9 @@ const API_ENDPOINT = "https://api.random.org/json-rpc/4/invoke";
  * @returns {Promise<number[]>} Shuffled array
  */
 export default async function shuffleWithRandom(a) {
+  if (!navigator.onLine) {
+    return shuffleWithPseudoRandom(a);
+  }
   const n = a.length;
   const response = await axios.post(API_ENDPOINT, {
     id: 42,
@@ -25,4 +29,13 @@ export default async function shuffleWithRandom(a) {
     throw new Error(response.data.error.message);
   }
   return response.data.result.random.data.map((position) => a[position]);
+}
+
+/**
+ *
+ * @param {number[]} a Array to shuffle
+ * @returns {number[]} Shuffled array
+ */
+function shuffleWithPseudoRandom(a) {
+  return shuffle(a);
 }
