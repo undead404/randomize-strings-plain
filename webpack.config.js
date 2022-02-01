@@ -67,13 +67,11 @@ module.exports = {
       ios: true,
       name: "Shuffle Strings",
       short_name: "Shu Stri",
-      theme_color: '#FF0000'
+      theme_color: "#FF0000",
     }),
-    new WorkboxPlugin.GenerateSW({
-      // these options encourage the ServiceWorkers to get in there fast
-      // and not allow any straggling "old" SWs to hang around
-      clientsClaim: true,
-      skipWaiting: true,
+    new WorkboxPlugin.InjectManifest({
+      swDest: 'service-worker.js',
+      swSrc: './src/service-worker.js',
     }),
   ],
 };

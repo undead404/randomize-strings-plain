@@ -13,6 +13,7 @@ button {
     cursor: pointer;
     margin-top: 16px;
     font-size: 1.4rem;
+    background-color: purple;
 }
 
 textarea {
