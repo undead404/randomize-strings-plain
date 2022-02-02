@@ -27,6 +27,10 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: "url-loader",
+      },
     ],
   },
   optimization: {
@@ -70,8 +74,8 @@ module.exports = {
       theme_color: "#FF0000",
     }),
     new WorkboxPlugin.InjectManifest({
-      swDest: 'service-worker.js',
-      swSrc: './src/service-worker.js',
+      swDest: "service-worker.js",
+      swSrc: "./src/service-worker.js",
     }),
   ],
 };
