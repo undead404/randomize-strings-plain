@@ -23,7 +23,7 @@
   "repository": "https://github.com/undead404/randomize-strings-plain",
   "scripts": {
     "build": "webpack",
-    "deploy": "NODE_ENV=production yarn build && surge dist --domain shuffle-strings.surge.sh",
+    "deploy": "surge dist --domain shuffle-strings.surge.sh",
     "start": "webpack serve --open"
   },
   "version": "0.1.0"
